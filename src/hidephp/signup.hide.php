@@ -20,7 +20,6 @@
 
 // if the user click the sign up button
 if (isset($_POST["submit"])) {
-    
 
     // require the prewritten functions store in this file
     require_once 'function.hide.php';

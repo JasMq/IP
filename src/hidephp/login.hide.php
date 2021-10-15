@@ -11,28 +11,27 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
 if (isset($_POST["submit"])) {
-    echo "The log in page works";
+    
 
     // require the prewritten functions store in this file
     require_once 'function.hide.php';
 
     // get the data user entered into the log in form
     $useraccount = $_POST["useraccount"];
-    $password = $_POST["password"];
+    $pwd = $_POST["password"];
 
 
     // check whethet any blank are left empty
-    if (emptyLoginInput($useraccount, $password) !== false) {
+    if (emptyLoginInput($useraccount, $pwd) !== false) {
         header("location: ../login.php?error=emptyInputFound");
         exit();
     }
 
 
-    if (userLogin($conn, $useraccount, $password)  !== false) {
+    if (userLogin($conn, $useraccount, $pwd)  !== false) {
         header("location: ../signup.php?error=invalidlogininfo");
         exit();
     }
-
 
 }
 
