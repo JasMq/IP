@@ -51,7 +51,6 @@ nav div.container ul li a:hover {
 
 
 .welcome > h1, .welcome > h2 {
-    border: 1px solid rgba(0, 0, 0, 0.507);
     text-align: center;
     height: 100px;
     padding: 5px 0px;
@@ -79,7 +78,7 @@ nav div.container ul li a:hover {
 .signup-heading {
     text-align: center;
     font-size: 60px;
-    margin: 7% 0 0 0;
+    margin: 4% 0 0 0;
 }
 div.signup-form form {
     text-align: center;
@@ -94,8 +93,8 @@ div.signup-form form input {
     height: 60px;
     border-radius: 3%;
     margin: auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
@@ -104,10 +103,6 @@ div.signup-form form input {
 div.signup-form form input:first-child {
     margin-top: 5%;
 }
-
-
-
-
 
 
 div.signup-form form button {
@@ -125,6 +120,12 @@ div.signup-form form button:hover {
     cursor: pointer;
 }
 
+div.signup-form > p {
+    font-size: 33px;
+    text-align: center;
+    margin-top: 4%;
+}
+
 
 
 /* *************************************************** */
@@ -132,7 +133,7 @@ div.signup-form form button:hover {
 .login-heading {
     text-align: center;
     font-size: 60px;
-    margin: 7% 0 0 0;
+    margin: 4% 0 0 0;
 }
 
 div.login-form form {
@@ -169,6 +170,8 @@ div.login-form form button {
 div.login-form form button:hover {
     background-color: rgba(255, 255, 255, 0.315);
 }
+
+
 
 
 

@@ -11,6 +11,18 @@
             <button type="submit" name="submit">Log In</button>
         </form>
 
+        <?php
+            if (isset($_GET["error"])) {
+
+                if ($_GET["error"] == "emptyInputFound") {
+                    echo "<p>You left some place blank!</p>";
+                }
+                else if ($_GET["error"] == "invalidlogininfo") {
+                    echo "<p>The name entered is invalid</p>";
+                } 
+            }
+        ?>
+
     </div>
 
     

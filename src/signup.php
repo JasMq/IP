@@ -14,29 +14,31 @@
         
         </form>
 
+            <!-- give some prompting text -->
+        <?php
+            if (isset($_GET["error"])) {
+
+                if ($_GET["error"] == "emptyinput") {
+                    echo "<p>You left some place blank!</p>";
+                }
+                else if ($_GET["error"] == "invaliduname") {
+                    echo "<p>The name entered is invalid</p>";
+                }
+                else if ($_GET["error"] == "invalidemail") {
+                    echo "<p>The email entered is invalid</p>";
+                }
+                else if ($_GET["error"] == "passwordisnotmatching") {
+                    echo "<p>The password entered twice is not matching</p>";
+                } 
+                else if ($_GET["error"] == "usernameistaken") {
+                    echo "<p>The user name has already be taken</p>";
+                }
+
+            }
+        ?>
+
     </div>
-    <!-- give some prompting text -->
-    <?php
-        if (isset($_GET["error"])) {
-
-            if ($_GET["error"] == "emptyinput") {
-                echo "<p>You left some place blank!</p>";
-            }
-            else if ($_GET["error"] == "invaliduname") {
-                echo "<p>The name entered is invalid</p>";
-            }
-            else if ($_GET["error"] == "invalidemail") {
-                echo "<p>The email entered is invalid</p>";
-            }
-            else if ($_GET["error"] == "passwordisnotmatching") {
-                echo "<p>The password entered twice is not matching</p>";
-            } 
-            else if ($_GET["error"] == "usernameistaken") {
-                echo "<p>The user name has already be taken</p>";
-            }
-
-        }
-    ?>
+    
 
 <?php
     include_once 'bottonbar.php';
