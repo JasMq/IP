@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color:blanchedalmond;
+}
+
+
+/* nevigation bar */
+nav div.container  {
+    background-color: rgba(0, 0, 0, 0.74);
+    width: 100%;
+    height: 60px;
+    
+}
+
+nav div.container ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    
+}
+
+nav div.container ul li {
+    align-self: center;
+    font-size: 40px;
+    width: 200px;
+    text-align: center;
+}
+
+
+nav div.container ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.712);
+}
+
+nav div.container ul li a:hover {
+    color: white;
+}
+
+/* Welcome page (home page) */
+.welcome {
+    width: 100%;
+    
+}
+
+
+.welcome > h1, .welcome > h2 {
+    border: 1px solid rgba(0, 0, 0, 0.507);
+    text-align: center;
+    height: 100px;
+    padding: 5px 0px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.61);
+    margin: 5% 0;
+}
+
+
+.welcome > h1 {
+    margin: 10% 0;
+    font-size: 60px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.welcome > h2:nth-child(2){
+    font-size: 35px;
+    margin: 5% 0;
+}
+
+
+/* *************************************************** */
+/* sign up form */
+.signup-heading {
+    text-align: center;
+    font-size: 60px;
+    margin: 7% 0 0 0;
+}
+div.signup-form form {
+    text-align: center;
+    margin:center;
+}
+
+
+div.signup-form form input {
+    /* margin: 0px 25%; */
+    display: block;
+    width: 400px;
+    height: 60px;
+    border-radius: 3%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div.signup-form form input:first-child {
+    margin-top: 5%;
+}
+
+
+
+
+
+
+div.signup-form form button {
+    width: 200px;
+    height: 50px;
+    font-size: 27px;
+    border-radius: 5px;
+    background-color: white;
+    
+    
+}
+
+div.signup-form form button:hover {
+    background-color: rgba(255, 255, 255, 0.315);
+    cursor: pointer;
+}
+
+
+
+/* *************************************************** */
+/* login page */
+.login-heading {
+    text-align: center;
+    font-size: 60px;
+    margin: 7% 0 0 0;
+}
+
+div.login-form form {
+    text-align: center;
+    margin:center;
+}
+
+
+div.login-form form input {
+    /* margin: 0px 25%; */
+    display: block;
+    width: 400px;
+    height: 60px;
+    border-radius: 3%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+
+div.login-form form button {
+    width: 200px;
+    height: 50px;
+    font-size: 27px;
+    border-radius: 5px;
+    background-color: white;
+    
+}
+
+div.login-form form button:hover {
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+
+
