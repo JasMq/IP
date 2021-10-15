@@ -3,4 +3,4 @@
 
 
 
-git clone https://github.com/JasMq/Individual-project.git && cd Individual-project
+git clone https://github.com/JasMq/IP.git && cd Ip
