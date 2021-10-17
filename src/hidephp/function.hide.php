@@ -68,7 +68,7 @@ function pwdNotMatch($pwd, $pwdrp) {
 
 function userNameExists($conn, $username, $email) {
 
-    
+    // prepare the MYSQL statement
     $sql = "SELECT * FROM users WHERE usersName = ? OR usersEmail = ?";
     $stmt = mysqli_stmt_init($conn);
 
@@ -108,6 +108,7 @@ function createEachUser($conn, $username, $email, $pwd) {
 
     $stmt = mysqli_stmt_init($conn);
 
+    // if cannot create user correctly, invalid creation header lead to a prompting message 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../signup.php?error=stmtfailed");
         exit();
@@ -145,17 +146,13 @@ function userLogin($conn, $useraccount, $pwd) {
     // since the passed in vaue can be either user name or user email.
     $userFound = userNameExists($conn, $useraccount, $useraccount);
 
-    
-
+    // invalid login header lead to a prompting message
     if ($userFound === false) {
-
+        
         header("location: ../login.php?error=loginFailed");
         exit();
     } 
-    
-    session_start();
-    $_SESSION["username"] = $userFound[1];
-    
-    header("location: ../index.php");
+    // if the login is sucessful, go directely to the homepage.html
+    header("location: ../homepage.html");
     exit();
 }
