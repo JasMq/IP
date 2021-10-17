@@ -16,18 +16,20 @@
 
                 if ($_GET["error"] == "emptyInputFound") {
                     echo "<p>You left some place blank!</p>";
+                    echo '<img src="cartoon-man.png" alt="smoke">';
                 }
                 else if ($_GET["error"] == "loginFailed") {
                     echo "<p>Your log is failed </p>";
+                    echo '<img src="cartoon-man.png" alt="smoke">';
                 } 
                 else if ($_GET["error"] == "invalidlogininfo") {
                     echo "<p>Log in information is invalid</p>";
+                    echo '<img src="cartoon-man.png" alt="smoke">';
                 } 
             }
         ?>
 
     </div>
-
     
 <?php
     include_once 'bottonbar.php';

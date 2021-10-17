@@ -20,18 +20,23 @@
 
                 if ($_GET["error"] == "emptyinput") {
                     echo "<p>You left some place blank!</p>";
+                    echo '<img src="cartoon-man.png" alt="smoke">';
                 }
                 else if ($_GET["error"] == "invaliduname") {
                     echo "<p>The name entered is invalid</p>";
+                    echo '<img src="cartoon-man.png" alt="smoke">';
                 }
                 else if ($_GET["error"] == "invalidemail") {
                     echo "<p>The email entered is invalid</p>";
+                    echo '<img src="cartoon-man.png" alt="smoke">';
                 }
                 else if ($_GET["error"] == "passwordisnotmatching") {
                     echo "<p>The password entered twice is not matching</p>";
+                    echo '<img src="cartoon-man.png" alt="smoke">';
                 } 
                 else if ($_GET["error"] == "usernameistaken") {
                     echo "<p>The user name has already be taken</p>";
+                    echo '<img src="cartoon-man.png" alt="smoke">';
                 }
 
             }
