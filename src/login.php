@@ -17,8 +17,11 @@
                 if ($_GET["error"] == "emptyInputFound") {
                     echo "<p>You left some place blank!</p>";
                 }
+                else if ($_GET["error"] == "loginFailed") {
+                    echo "<p>Your log is failed </p>";
+                } 
                 else if ($_GET["error"] == "invalidlogininfo") {
-                    echo "<p>The name entered is invalid</p>";
+                    echo "<p>Log in information is invalid</p>";
                 } 
             }
         ?>

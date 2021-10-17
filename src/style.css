@@ -6,6 +6,7 @@ body {
     width: 100%;
     height: 100%;
     background-color:blanchedalmond;
+    
 }
 
 
@@ -172,6 +173,100 @@ div.login-form form button:hover {
 }
 
 
+div.login-form > p {
+    font-size: 33px;
+    text-align: center;
+    margin-top: 4%;
+}
+
+/* The home page */
+div.homepage > h1 {
+    text-align: center;
+    font-size: 45px;
+    color: rgba(56, 51, 51, 0.863);
+}
+
+div.homepage > h1:first-child {
+    margin-top: 6%;
+}
+div.homepage > h1:nth-child(2) {
+    margin-top: 4%;
+    color: rgba(68, 60, 60, 0.712);
+    font-size: 35px;
+}
+
+div.homepage > button {
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bolder;
+    display: block;
+    margin: 5% auto 3% auto;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(233, 152, 105);
+
+}
+
+div.homepage > button:hover {
+    background-color: burlywood;
+    color:rgba(255, 255, 255, 0.712)
+}
 
 
+
+div.homepage > h2 {
+    font-size: 35px;
+    color: rgba(68, 60, 60, 0.712);
+    display: block;
+    text-align: center;
+    margin-top: 6%;
+}
+
+div.homepage > p {
+    font-size: 25px;
+    margin: 1% 17%;
+    text-align: center;
+    color: rgba(68, 60, 60, 0.712);
+}
+
+
+
+/* The display page */
+div.display-container {
+    position: relative;
+    
+}
+
+div.display-container h1 {
+   text-align: center;
+   font-size: 60px;
+   margin-top: 3%;
+}
+
+
+div.display-container form {
+    position: absolute;
+    right: 4%;
+    width: 350px;
+    height: 40px;
+    margin-top: 35px;
+}
+
+.display-container form > input {
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 3px;
+
+}
+
+.display-container form > button {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    margin-left: 3%;
+    border-radius: 3px;
+}
 

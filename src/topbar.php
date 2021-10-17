@@ -12,10 +12,9 @@
                 <li><a href="index.php">Home</a></li>
                 <!-- check the current login  status-->
                 <?php
-                if (isset($_SESSION["username"])) {
+                if (isset($_SESSION["usersId"])) {
                     echo "<li><a href='logout.php'>Log out</a></li>";
-                }
-                else {
+                } else {
                     echo "<li><a href='login.php'>Log in</a></li>";
                 }
                 ?>
