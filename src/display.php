@@ -12,21 +12,8 @@
                 <button type="submit" name="submit">Search</button>
             </form>
 
-            // test used
-            <div class = "record-container">
-                <div class="creater">jajdudhduduhudhd</div>
-                <div class="subject">mmmmdmmdmmdmmmdd</div>
-                <div class="description">mmdmdmmdmdmmdmmmama d  c</div>
-                <div class="publisher">madfahhhfhhchhxa</div>
-                <div class="source">ajjdjajejejaxnammxa</div>
-                <div class="temporal">kakelakdkkxkkakenaxmama</div>
-                <img class="image">
-            </div>
-
             <!-- insert each data record -->
             <?php
-
-        
                 // check whether the submit button has been set
                 if (isset($_POST['submit'])) {
                 
@@ -76,12 +63,12 @@
                     while($row = mysqli_fetch_assoc($data)) {
                         echo '<div class="record-container">';
                         echo '<img class="image" src="'.$row['Image'].'">';
-                        echo '<div class="creater"><b>Creater:</b>'.$row['Creater'].'</div>';
-                        echo '<div class="subject"><b>Subject:</b>'.$row['Subject'].'</div>';
-                        echo '<div class="description"><b>Description:</b>'.$row['Descriptioon'].'</div>';
-                        echo '<div class="publisher"><b>Publisher:</b>'.$row['Publisher'].'</div>';
-                        echo '<div class="source"><b>Source:</b>'.$row['Source'].'</div>';
-                        echo '<div class="temporal"><b>Temporal:</b>'.$row['Temporal'].'</div>';
+                        echo '<div class="creater"><b>Creater:&nbsp;</b>'.$row['Creater'].'</div>';
+                        echo '<div class="subject"><b>Subject:&nbsp;</b>'.$row['Subject'].'</div>';
+                        echo '<div class="description"><b>Description:&nbsp;</b>'.$row['Description'].'</div>';
+                        echo '<div class="publisher"><b>Publisher:&nbsp;</b>'.$row['Publisher'].'</div>';
+                        echo '<div class="source"><b>Source:&nbsp;</b>'.$row['Source'].'</div>';
+                        echo '<div class="temporal"><b>Temporal:&nbsp;</b>'.$row['Temporal'].'</div>';
                         echo '</div>';
                     }
                 } else {
