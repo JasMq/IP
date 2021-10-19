@@ -132,7 +132,7 @@ div.signup-form > p {
 div.signup-form img:nth-child(3) {
     position: fixed;
     bottom: 0;
-    left: 18%;
+    left: 15%;
     width: 250px;
     height: 200px;
 }
@@ -193,7 +193,7 @@ div.login-form > p {
 div.login-form > img:nth-child(3) {
     position: fixed;
     bottom: 0;
-    left: 23%;
+    left: 18%;
     width: 250px;
     height: 200px;
 }
@@ -264,8 +264,8 @@ div.display-container h1 {
 div.display-container form {
     display: block;
     
-    width: 350px;
-    height: 40px;
+    width: 520px;
+    height: 50px;
     
     border: 1px solid red;
     float: right;
@@ -275,8 +275,8 @@ div.display-container form {
 }
 
 .display-container form > input {
-    width: 200px;
-    height: 40px;
+    width: 350px;
+    height: 50px;
     font-size: 15px;
     text-align: center;
     border-radius: 3px;
@@ -284,11 +284,13 @@ div.display-container form {
 }
 
 .display-container form > button {
-    width: 100px;
-    height: 40px;
+    width: 140px;
+    height: 50px;
     font-size: 15px;
     margin-left: 3%;
     border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.836);
+    cursor: pointer;
 }
 
 .display-container .record-container {
@@ -303,19 +305,35 @@ div.display-container form {
     
 }
 
+.record-container {
+    border: 2px solid black;
+    border-radius: 2px;
+    background-color:rgba(255, 255, 255, 0.425);
+
+}
+
 .record-container > div {
     margin: 1% 4%;
     text-align: center;
+    display: block;
+    border: 2px solid black;
+
+}
+
+.record-container > div:first-child {
+    font-size: 20px;
+    
 }
 
 
 
 .record-container .image {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.644);
     display: block;
     width: 250px;
     height: 200px;
     margin: auto;
+    
 }
 
 

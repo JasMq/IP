@@ -7,39 +7,30 @@
 ?>
         <div class = "display-container">
             <h1>Art Gallery</h1>
-            <form action="/hidephp/search.hide.php" method="POST">
+            <form action="display.php" method="POST">
                 <input type="text" name="keyword" placeholder="Type in your keyword...">
                 <button type="submit" name="submit">Search</button>
             </form>
 
             // test used
-            <!-- <div class = "record-container">
-                <div class="creater"></div>
-                <div class="subject"></div>
-                <div class="description"></div>
-                <div class="publisher"></div>
-                <div class="source"></div>
-                <div class="temporal"></div>
+            <div class = "record-container">
+                <div class="creater">jajdudhduduhudhd</div>
+                <div class="subject">mmmmdmmdmmdmmmdd</div>
+                <div class="description">mmdmdmmdmdmmdmmmama d  c</div>
+                <div class="publisher">madfahhhfhhchhxa</div>
+                <div class="source">ajjdjajejejaxnammxa</div>
+                <div class="temporal">kakelakdkkxkkakenaxmama</div>
                 <img class="image">
-            </div> -->
+            </div>
 
             <!-- insert each data record -->
             <?php
 
-                // get all the data record from the database
-                $sql = "SELECT creator AS Creater,
-                 record_subject AS Subject,
-                 record_description AS Description,
-                 publisher AS Publisher,
-                 record_source AS Source,
-                 temporal AS Temporal,
-                 record_image AS Image
-                 FROM MyRecords;";
-
+        
                 // check whether the submit button has been set
                 if (isset($_POST['submit'])) {
                 
-                    $searchresult = mysqli_real_escape_string($conn, $_POST['keyword']);
+                    $keyword = mysqli_real_escape_string($conn, $_POST['keyword']);
 
                     $sql = "SELECT creator AS Creater,
                     record_subject AS Subject,
@@ -49,20 +40,34 @@
                     temporal AS Temporal,
                     record_image AS Image
                     FROM MyRecords
-                    WHERE Creater LIKE '%$keyword%' 
-                    OR Subject LIKE '%$keyword%'
-                    OR Description LIKE '%$keyword%'
-                    OR Publisher LIKE '%$keyword%'
-                    OR Source LIKE '%$keyword%'
-                    OR Temporal LIKE '%$keyword%';";
+                    WHERE creator LIKE '%$keyword%' 
+                    OR record_subject LIKE '%$keyword%'
+                    OR record_description LIKE '%$keyword%'
+                    OR publisher LIKE '%$keyword%'
+                    OR record_source LIKE '%$keyword%'
+                    OR temporal LIKE '%$keyword%';";
 
                     $data = mysqli_query($conn, $sql);
 
 
                 } else {
+
+                    // get all the data record from the database
+                    $sql = "SELECT creator AS Creater,
+                    record_subject AS Subject,
+                    record_description AS Description,
+                    publisher AS Publisher,
+                    record_source AS Source,
+                    temporal AS Temporal,
+                    record_image AS Image
+                    FROM MyRecords;";
+
                     // if it is not set, display all data on the screen
                     $data = mysqli_query($conn, $sql);
+                    
                 }
+
+               
 
                 
                 // if the records found is greater than zero, display each records using a while loop
@@ -71,12 +76,12 @@
                     while($row = mysqli_fetch_assoc($data)) {
                         echo '<div class="record-container">';
                         echo '<img class="image" src="'.$row['Image'].'">';
-                        echo '<div class="creater">Creater:'.$row['Creater'].'</div>';
-                        echo '<div class="subject">Subject:'.$row['Subject'].'</div>';
-                        echo '<div class="description">Description:'.$row['Descriptioon'].'</div>';
-                        echo '<div class="publisher">Publisher:'.$row['Publisher'].'</div>';
-                        echo '<div class="source">Source:'.$row['Source'].'</div>';
-                        echo '<div class="temporal">Temporal:'.$row['Temporal'].'</div>';
+                        echo '<div class="creater"><b>Creater:</b>'.$row['Creater'].'</div>';
+                        echo '<div class="subject"><b>Subject:</b>'.$row['Subject'].'</div>';
+                        echo '<div class="description"><b>Description:</b>'.$row['Descriptioon'].'</div>';
+                        echo '<div class="publisher"><b>Publisher:</b>'.$row['Publisher'].'</div>';
+                        echo '<div class="source"><b>Source:</b>'.$row['Source'].'</div>';
+                        echo '<div class="temporal"><b>Temporal:</b>'.$row['Temporal'].'</div>';
                         echo '</div>';
                     }
                 } else {
