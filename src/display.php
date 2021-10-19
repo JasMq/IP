@@ -8,7 +8,7 @@
         <div class = "display-container">
             <h1>Art Gallery</h1>
             <form action="/hidephp/search.hide.php" method="POST">
-                <input type="text" name="useraccount" placeholder="Type in your keyword...">
+                <input type="text" name="keyword" placeholder="Type in your keyword...">
                 <button type="submit" name="submit">Search</button>
             </form>
 
@@ -25,17 +25,47 @@
 
             <!-- insert each data record -->
             <?php
+
                 // get all the data record from the database
                 $sql = "SELECT creator AS Creater,
                  record_subject AS Subject,
-                 record_description AS Descriptioon,
+                 record_description AS Description,
                  publisher AS Publisher,
                  record_source AS Source,
                  temporal AS Temporal,
                  record_image AS Image
                  FROM MyRecords;";
-                $data = mysqli_query($conn, $sql);
 
+                // check whether the submit button has been set
+                if (isset($_POST['submit'])) {
+                
+                    $searchresult = mysqli_real_escape_string($conn, $_POST['keyword']);
+
+                    $sql = "SELECT creator AS Creater,
+                    record_subject AS Subject,
+                    record_description AS Description,
+                    publisher AS Publisher,
+                    record_source AS Source,
+                    temporal AS Temporal,
+                    record_image AS Image
+                    FROM MyRecords
+                    WHERE Creater LIKE '%$keyword%' 
+                    OR Subject LIKE '%$keyword%'
+                    OR Description LIKE '%$keyword%'
+                    OR Publisher LIKE '%$keyword%'
+                    OR Source LIKE '%$keyword%'
+                    OR Temporal LIKE '%$keyword%';";
+
+                    $data = mysqli_query($conn, $sql);
+
+
+                } else {
+                    // if it is not set, display all data on the screen
+                    $data = mysqli_query($conn, $sql);
+                }
+
+                
+                // if the records found is greater than zero, display each records using a while loop
                 if (mysqli_num_rows($data) > 0) {
 
                     while($row = mysqli_fetch_assoc($data)) {
@@ -49,10 +79,16 @@
                         echo '<div class="temporal">Temporal:'.$row['Temporal'].'</div>';
                         echo '</div>';
                     }
+                } else {
+                    echo "There are no results matching your entered keyword. Try Again!";
                 }
 
 
+
+
             ?>
+
+            
         </div>
         
 
